@@ -1,2 +1,2 @@
-#!/bin/python3
+#!/bin/bash
 chmod 753 hello

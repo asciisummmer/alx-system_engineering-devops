@@ -1,0 +1,5 @@
+#!/usr/bin/env bash
+# change domain name server
+cp /etc/hosts ~/hosts.new
+echo -e "localhost 127.0.0.2\nfacebook.com 8.8.8.8\n" >> ~/hosts.new
+cp -f ~/hosts.new /etc/hosts

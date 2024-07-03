@@ -1,5 +1,4 @@
 # execute a command
-exec { 'kill process':
-  command  => 'pkill -x "sleep"',
+exec { 'pkill -x sleep':
   provider => shell,
 }

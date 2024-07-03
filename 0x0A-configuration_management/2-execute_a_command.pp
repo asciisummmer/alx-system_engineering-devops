@@ -1,4 +1,4 @@
 # execute a command
-exec { 'pkill -x sleep':
+exec { 'pkill sleep':
   provider => shell,
 }

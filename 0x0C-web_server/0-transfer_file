@@ -6,7 +6,8 @@ usage="Usage: 0-transfer_file PATH_TO_FILE IP USERNAME PATH_TO_SSH_KEY"
 if [ $# -ne 4 ]
 then
     echo "$usage"
+else
+    echo -e "Host *\n\tStrictHostKeyChecking no" >> ~/.ssh/config
+    chmod 400 ~/.ssh/config
+    scp -i "$4" "$HOME/$1" "$3@$2"
 fi
-echo -e "Host *\n\tStrictHostKeyChecking no" >> "$HOME/.ssh/config"
-chmod 400 "$HOME/.ssh/config"
-scp -i "$4" "$HOME/$1" "$3@$2"
